@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 func main() {
 	i := 1 //int64	
@@ -12,6 +15,10 @@ func main() {
 	i++ // incrementando diretamente pela variável
 	
 	fmt.Printf("i: %d, *p: %d, &i: %p, p: %p\n", i, *p, &i, p)
+	
+	aString := "string"
+	shortPointerDeclaration := &aString
+	fmt.Println("Declaring and initializing a ", reflect.TypeOf(shortPointerDeclaration))
 
 	// Go NÃO tem aritmética de ponteiros!
 	//	p++
